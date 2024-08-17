@@ -1,0 +1,34 @@
+/* Estilos de la sección de sucursales */
+.sucursales {
+    background-color: #f5e2f3;
+}
+.branch-list {
+    padding: 20px;
+    text-align: center;
+}
+
+.branch-list h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.branch {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.branch-list .card .card-title {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.branch .card-body p {
+    margin: 5px 0;
+    font-size: 1em;
+    text-align: left;
+}

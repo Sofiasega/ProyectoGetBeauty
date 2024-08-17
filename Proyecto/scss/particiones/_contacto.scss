@@ -1,0 +1,57 @@
+.container1 {
+    background-color: #f5e2f3; /* Color de fondo para la página de contacto */
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 35px auto; 
+    padding: 20px;
+    background-color: #fcf3f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+textarea {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 0; 
+    margin-right: 10px; 
+}
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+/* Estilos específicos para los botones dentro del formulario de contacto */
+.contact-form button {
+    background-color: #f8b6d1; /* Color de fondo del botón */
+    color: black; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+}
+
+.contact-form button:hover {
+    background-color: beige; /* Color de fondo del botón al pasar el ratón */
+}
+

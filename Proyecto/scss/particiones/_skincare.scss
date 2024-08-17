@@ -1,0 +1,19 @@
+/* Estilos para el artículo */
+.routine-builder {
+    background-color: #f5e2f3;
+}
+
+article {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+article h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+}
+
+article p, article ol {
+    margin-top: 10px;
+}

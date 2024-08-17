@@ -1,0 +1,57 @@
+/* Footer */
+footer {
+    background-color: #333;
+    margin-top: 0px;
+    padding: 20px 0; /* Asegúrate de tener espacio interno en el footer */
+    text-align: center; /* Centrar contenido */
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+/* Estilos del formulario de suscripción */
+footer .form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Asegura que los elementos se alineen en pantallas pequeñas */
+}
+
+footer .form-inline .form-control {
+    width: 250px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    margin-bottom: 10px; /* Añadir espacio inferior para mejor visual en pantallas pequeñas */
+}
+
+/* Estilos del formulario de suscripción */
+footer .form-inline button {
+    background-color: #333 !important; /* Color de fondo del botón */
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+footer .form-inline button:hover {
+    background-color: #555 !important; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Eliminar el borde azul del enfoque */
+footer .form-inline button:focus {
+    outline: none; /* Eliminar el borde de enfoque */
+    box-shadow: none; /* Eliminar el efecto de sombra del enfoque */
+}
+
+footer .text-white {
+    color: #ffffff !important;
+}
+

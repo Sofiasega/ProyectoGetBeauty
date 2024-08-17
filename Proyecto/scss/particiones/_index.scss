@@ -1,0 +1,80 @@
+/* Estilos del primer banner */
+#banner {
+    margin: 0; /* Elimina el margen alrededor del primer banner */
+    padding: 0; /* Elimina el relleno alrededor del primer banner */
+}
+
+/* Estilos del segundo banner */
+#segundo-banner {
+    position: relative; 
+    overflow: visible;
+    text-align: center;
+    margin: 0; /* Elimina el margen alrededor del segundo banner */
+    padding: 0; /* Elimina el relleno alrededor del segundo banner */
+}
+
+/* Estilos para la imagen del segundo banner */
+#segundo-banner img {
+    width: 100%;
+    height: auto; /* Mantén la altura automática para mantener la proporción */
+    object-fit: cover; /* Asegúrate de que la imagen cubra el área del banner */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombreado solo abajo */
+    display: block; /* Asegúrate de que la imagen se muestre como bloque */
+    margin: 0; /* Elimina el margen de la imagen */
+    padding: 0; /* Elimina el relleno de la imagen */
+}
+
+/* Estilos del botón del segundo banner */
+#segundo-banner .btn {
+    position: absolute;
+    bottom: 140px; /* Ajusta la posición vertical del botón */
+    left: 12%;
+    transform: translateX(-50%);
+    background-color: #f8b6d1;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#segundo-banner .btn:hover {
+    background-color: beige;
+}
+
+/* Estilos del contenedor de ancho completo con color de fondo */
+#productos-bg {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding-top: 40px; /* Espacio superior */
+    padding-bottom: 40px; /* Espacio inferior */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    margin: 0; /* Elimina el margen alrededor del contenedor de fondo */
+}
+
+/* Estilos del contenedor centrado para el contenido */
+#productos {
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor dentro del contenedor de fondo */
+    padding: 0 15px; /* Espacio interno opcional para el contenedor centrado */
+}
+
+/* Establece una altura mínima para las tarjetas */
+#productos .card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Permite que los elementos internos se alineen verticalmente */
+    min-height: 400px; /* Ajusta este valor según tus necesidades */
+}
+
+#productos .card:hover {
+    transform: scale(1.05);
+}
+
+#productos .card-title {
+    font-size: 1rem;
+    color: #495057;
+}
+

@@ -1,0 +1,99 @@
+/* Personalización del header */
+.header-bg-rosa {
+    background-color: #f8b6d1; /* Color rosa */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000; /* Cambia el color del texto a negro para mejor visibilidad */
+}
+
+.logo {
+    width: 15%; /* Ajusta el tamaño del logo en píxeles */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+/* Personalización del menú */
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #6c757d;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e63fa6;
+    text-decoration: none;
+}
+
+/* Centra el menú principal en la barra de navegación */
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+}
+
+.navbar-nav {
+    margin-left: 120px; /* Ajusta el valor según la separación deseada */
+}
+
+/* Alinea los íconos a la derecha */
+.navbar-nav.ml-auto {
+    margin-left: auto; /* Alinea los íconos a la derecha */
+}
+
+/* Ajusta el margen derecho de los elementos nav-item para aumentar la separación */
+.navbar-nav.ml-auto .nav-item {
+    margin-right: 15px; /* Cambia el valor según la separación deseada */
+}
+
+/* Opcional: Asegúrate de que el último ítem no tenga margen derecho */
+.navbar-nav.ml-auto .nav-item:last-child {
+    margin-right: 0;
+}
+
+
+#cart {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartItems .list-group-item {
+    padding: 8px;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Estilo para el contador del carrito */
+#cartCount {
+    color: #000 !important; /* Cambia esto al color que desees */
+    background-color: #a3517e !important; /* Color de fondo deseado */
+    border-radius: 50%; /* Para hacer el número circular */
+    padding: 0.2em 0.5em; /* Ajusta el tamaño del contenedor del número */
+    font-weight: bold; /* Opcional: para hacer el texto más destacado */
+    font-size: 1em; /* Ajusta el tamaño de la fuente según tu diseño */
+}

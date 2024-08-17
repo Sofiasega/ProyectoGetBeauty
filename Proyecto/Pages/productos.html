@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-bg-rosa text-center py-4">
+        <img src="../imagenes/Beauty.png" alt="Logo" class="logo">
+        <!-- Menú principal -->
+        <nav class="navbar navbar-expand-md navbar-light header-bg-rosa">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
+                    aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="../Pages/productos.html" class="nav-link">Productos</a></li>
+                        <li class="nav-item"><a href="../Pages/skincare.html" class="nav-link">Skincare</a></li>
+                        <li class="nav-item"><a href="../Pages/contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="../Pages/sucursales.html" class="nav-link">Sucursales</a></li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Icono del carrito en la navegación -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <img src="../imagenes/carro.png" alt="Carrito" width="22">
+                            <span id="cartCount" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="#login" class="nav-link"><img src="../imagenes/usuario.png"
+                                alt="Usuario" width="22"></a></li>
+                    <li class="nav-item"><a href="#buscar" class="nav-link"><img src="../imagenes/lupa.png" alt="Buscar"
+                                width="22"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenedor de ancho completo con color de fondo -->
+        <div id="productos-bg">
+            <div id="productos" class="container">
+                <div class="row">
+                    <!-- Filtro Lateral -->
+                    <aside class="filters">
+                        <h4>Filtros</h4>
+                        <!-- Filtros Activos -->
+                        <div id="active-filters-container" class="mb-3">
+                            <h5 id="filter-header">Filtrado por:</h5>
+                            <div id="active-filters">
+                                <div class="filter-tag">
+                                    Ojos <span class="remove-filter" data-filter="ojos">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Rostro <span class="remove-filter" data-filter="rostro">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Labios <span class="remove-filter" data-filter="labios">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Cejas <span class="remove-filter" data-filter="cejas">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Esmaltes <span class="remove-filter" data-filter="esmaltes">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Máscaras-Pestañas <span class="remove-filter" data-filter="mascaras-pestañas">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Delineadores <span class="remove-filter" data-filter="delineadores">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Sombras <span class="remove-filter" data-filter="sombras">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Correctores <span class="remove-filter" data-filter="correctores">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Polvos y Bronzer <span class="remove-filter"
+                                        data-filter="polvos-bronzer">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Bases <span class="remove-filter" data-filter="bases">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Pre-bases <span class="remove-filter" data-filter="pre-bases">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Rubores <span class="remove-filter" data-filter="rubores">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Labiales Líquidos <span class="remove-filter"
+                                        data-filter="labiales-líquidos">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Labiales-Barra <span class="remove-filter"
+                                        data-filter="labiales-barra">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Gloss <span class="remove-filter" data-filter="gloss">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Geles-Tintas <span class="remove-filter"
+                                        data-filter="geles-tintas">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Delineadores-cejas <span class="remove-filter"
+                                        data-filter="delineadores-cejas">&times;</span>
+                                </div>
+                                <div class="filter-tag">
+                                    Máscaras <span class="remove-filter" data-filter="mascaras">&times;</span>
+                                </div>
+                            </div>
+                            <button id="clear-filters" class="btn btn-secondary mt-2">Limpiar Filtros</button>
+                        </div>
+
+                        <!-- Filtros -->
+                        <div class="accordion" id="filterAccordion">
+                            <!-- Categoría -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingCategory">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseCategory" aria-expanded="true"
+                                        aria-controls="collapseCategory">
+                                        Categoría
+                                    </button>
+                                </h2>
+                                <div id="collapseCategory" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingCategory" data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body">
+                                        <form id="category-form">
+                                            <!-- Categoria checkbox 1 -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" data-filter="Ojos" type="checkbox"
+                                                    value="ojos" id="category-ojos">
+                                                <label class="form-check-label" for="category-ojos">Ojos (42)</label>
+                                            </div>
+                                            <!-- Categoria checkbox 2 -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" data-filter="Rostro" type="checkbox" 
+                                                value="rostro" id="category-rostro">
+                                                <label class="form-check-label" for="category-rostro">Rostro (25)</label>
+                                            </div>
+                                            <!-- Categoria checkbox 3 -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" data-filter="Labios" type="checkbox"
+                                                    value="labios" id="category-labios">
+                                                <label class="form-check-label" for="category-labios">Labios (15)</label>
+                                            </div>
+                                            <!-- Categoria checkbox 4 -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" data-filter="Cejas" type="checkbox"
+                                                    value="cejas" id="category-cejas">
+                                                <label class="form-check-label" for="category-cejas">Cejas (10)</label>
+                                            </div>
+                                            <!-- Categoria checkbox 5 -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" data-filter="Esmaltes" type="checkbox"
+                                                    value="esmaltes" id="category-esmaltes">
+                                                <label class="form-check-label" for="category-esmaltes">Esmaltes
+                                                    (2)</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Subcategorías -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSubcategory">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSubcategory" aria-expanded="false"
+                                        aria-controls="collapseSubcategory">
+                                        Subcategorías
+                                    </button>
+                                </h2>
+                                <div id="collapseSubcategory" class="accordion-collapse collapse"
+                                    aria-labelledby="headingSubcategory" data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body">
+                                        <form id="subcategory-form">
+                                            <!-- Ojos -->
+                                            <div class="form-check ojos-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Máscaras-Pestañas"
+                                                    type="checkbox" value="mascaras de pestañas"
+                                                    id="subcategory-mascaras">
+                                                <label class="form-check-label" for="subcategory-mascaras">Máscaras-Pestañas</label>
+                                            </div>
+                                            <div class="form-check ojos-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Delineadores"
+                                                    type="checkbox" value="delineadores" id="subcategory-delineadores">
+                                                <label class="form-check-label"
+                                                    for="subcategory-delineadores">Delineadores</label>
+                                            </div>
+                                            <div class="form-check ojos-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Sombras" type="checkbox"
+                                                    value="sombras" id="subcategory-sombras">
+                                                <label class="form-check-label"
+                                                    for="subcategory-sombras">Sombras</label>
+                                            </div>
+
+                                            <!-- Rostro -->
+                                            <div class="form-check rostro-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Correctores"
+                                                    type="checkbox" value="correctores" id="subcategory-correctores">
+                                                <label class="form-check-label"
+                                                    for="subcategory-correctores">Correctores</label>
+                                            </div>
+                                            <div class="form-check rostro-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Polvos-Bronzer"
+                                                    type="checkbox" value="polvos y bronzer" id="subcategory-polvos">
+                                                <label class="form-check-label" for="subcategory-polvos">Polvos-Bronzer</label>
+                                            </div>
+                                            <div class="form-check rostro-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Bases" type="checkbox"
+                                                    value="bases" id="subcategory-bases">
+                                                <label class="form-check-label" for="subcategory-bases">Bases</label>
+                                            </div>
+                                            <div class="form-check rostro-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Pre-bases" type="checkbox"
+                                                    value="pre-bases" id="subcategory-prebases">
+                                                <label class="form-check-label"
+                                                    for="subcategory-prebases">Pre-bases</label>
+                                            </div>
+                                            <div class="form-check rostro-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Rubores" type="checkbox"
+                                                    value="rubores" id="subcategory-rubores">
+                                                <label class="form-check-label"
+                                                    for="subcategory-rubores">Rubores</label>
+                                            </div>
+
+                                            <!-- Labios -->
+                                            <div class="form-check labios-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Labiales-Líquidos"
+                                                    type="checkbox" value="labiales líquidos"
+                                                    id="subcategory-labiales-liquidos">
+                                                <label class="form-check-label"
+                                                    for="subcategory-labiales-liquidos">Labiales-Líquidos</label>
+                                            </div>
+                                            <div class="form-check labios-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Labiales-Barra"
+                                                    type="checkbox" value="labiales en barra"
+                                                    id="subcategory-labiales-barra">
+                                                <label class="form-check-label"
+                                                    for="subcategory-labiales-barra">Labiales-Barra</label>
+                                            </div>
+                                            <div class="form-check labios-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Gloss" type="checkbox"
+                                                    value="gloss" id="subcategory-gloss">
+                                                <label class="form-check-label" for="subcategory-gloss">Gloss</label>
+                                            </div>
+                                            <div class="form-check labios-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Geles-Tintas"
+                                                    type="checkbox" value="geles y tintas" id="subcategory-geles">
+                                                <label class="form-check-label" for="subcategory-geles">Geles-Tintas</label>
+                                            </div>
+
+                                            <!-- Cejas -->
+                                            <div class="form-check cejas-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Delineadores-cejas"
+                                                    type="checkbox" value="delineadores-cejas"
+                                                    id="subcategory-delineadores-cejas">
+                                                <label class="form-check-label"
+                                                    for="subcategory-delineadores-cejas">Delineadores-cejas</label>
+                                            </div>
+
+                                            <!-- Esmaltes -->
+                                            <div class="form-check esmaltes-subcategory subcategory">
+                                                <input class="form-check-input" data-filter="Esmaltes" type="checkbox"
+                                                    value="esmaltes" id="subcategory-esmaltes">
+                                                <label class="form-check-label"
+                                                    for="subcategory-esmaltes">Esmaltes</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Precio -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingPrice">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsePrice" aria-expanded="false"
+                                        aria-controls="collapsePrice">
+                                        Precio
+                                    </button>
+                                </h2>
+                                <div id="collapsePrice" class="accordion-collapse collapse"
+                                    aria-labelledby="headingPrice" data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body">
+                                        <form id="price-form">
+                                            <div class="mb-3">
+                                                <label for="min-price" class="form-label">Precio Mínimo</label>
+                                                <input type="number" class="form-control" id="min-price" min="0"
+                                                    step="0.01">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="max-price" class="form-label">Precio Máximo</label>
+                                                <input type="number" class="form-control" id="max-price" min="0"
+                                                    step="0.01">
+                                            </div>
+                                            <button type="button" id="apply-price-filter"
+                                                class="btn btn-primary">Aplicar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </aside>
+
+                <!-- Productos -->
+                <div class="col-md-9">
+                    <div class="row">
+                        <!-- Primer producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/6.jpg" alt="Producto 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">LASH SENSATIONAL SKY HIGH</h5>
+                                    <p class="card-text"><strong>$16.447,80</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segundo producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/7.jpg" alt="Producto 2" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">MAYBELLINE BASE DE MAQUILLAJE INSTANTE AGE REWIND ERASER
+                                    </h5>
+                                    <p class="card-text"><strong>$22.533,00</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tercer producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/8.jpg" alt="Producto 3" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">BASE LIQUIDA MAYBELLINE SUPERSTAY ACTIVE WEAR</h5>
+                                    <p class="card-text"><strong>$34.208,00</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cuarto producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/3.png" alt="Producto 4" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">BASE DE MAQUILLAJE MAYBELLINE FIT ME FRESH TINT</h5>
+                                    <p class="card-text"><strong>$26.103,29</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quinto producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/4.jpg" alt="Producto 5" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">LÁPIZ LABIAL LÍQUIDO MAYBELLINE NEW YORK SUPERSTAY MATTE
+                                        INK</h5>
+                                    <p class="card-text"><strong>$20.519,00</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sexto producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/5.png" alt="Producto 6" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">PALETA MAYBELLINE DE SOMBRAS CITY MINI PALETTE BLUSHED
+                                        AVENUE 6 TONOS</h5>
+                                    <p class="card-text"><strong>$22.408,00</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Séptimo producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/10.jpg" alt="Producto 7" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">BRILLO LABIAL MAYBELLINE LIFTER GLOSS CON ÁCIDO
+                                        HIALURÓNICO</h5>
+                                    <p class="card-text"><strong>$19.887,00</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Octavo producto -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card product-card">
+                                <img src="../imagenes/11.png" alt="Producto 8" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">MAQUILLAJE MAYBELLINE FLUIDO FIT ME MATTE</h5>
+                                    <p class="card-text"><strong>$11.758,90</strong></p>
+                                    <button class="btn btn-dark">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h3>Registrate y recibí nuestras novedades</h3>
+            <form class="form-inline justify-content-center mt-3">
+                <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Email">
+                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+            </form>
+            <div class="mt-3">
+                <a href="#facebook" class="text-white mx-2"><img src="../imagenes/facebook.png" alt="facebook"
+                        width="30"></a>
+                <a href="#instagram" class="text-white mx-2"><img src="../imagenes/instagram.png" alt="instagram"
+                        width="30"></a>
+                <a href="#X" class="text-white mx-2"><img src="../imagenes/x.png" alt="X" width="30"></a>
+                <a href="#tiktok" class="text-white mx-2"><img src="../imagenes/tiktok.png" alt="tiktok" width="30"></a>
+            </div>
+            <div class="mt-3">
+                <a href="../Pages/contacto.html" class="text-white mx-2">Contacto</a>
+                <a href="../Pages/faq.html" class="text-white mx-2">FAQ</a>
+                <a href="../Pages/productos.html" class="text-white mx-2">Productos</a>
+                <a href="../Pages/skincare.html" class="text-white mx-2">Skincare</a>
+                <a href="../Pages/sucursales.html" class="text-white mx-2">Sucursales</a>
+            </div>
+            <div class="mt-3">
+                <p>&copy; 2024 Get Beauty</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal del carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cartItems" class="list-group">
+                        <!-- Los productos se añadirán aquí -->
+                    </ul>
+                    <div class="mt-3">
+                        <strong>Total:</strong> <span id="cartTotal">$0.00</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Proceder al pago</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast para notificaciones -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Notificación</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Producto añadido al carrito.
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS Bundle (incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script personalizado para el carrito -->
+    <script src="../js/main.js"></script>
+    <script src="../js/filter.js"></script>
+</body>
+
+</html>
